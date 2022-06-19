@@ -49,6 +49,8 @@ def test_roulette(link):
 def start():
     # start programm
     print("***")
+    print("***")
+    print("***")
     print("sergsinist webtutor answer crawler")
     print("***")
     print("***")
