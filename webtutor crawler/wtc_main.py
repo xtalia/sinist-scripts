@@ -21,8 +21,7 @@ def test_roulette(link):
     code = parse_qs(parsed_url.query)['part_code'][0]
 
     # сцепление ссылки, ведущей на искомый xml файл с его выводом
-    url = "https://abc.tele2.ru/qti_return.html?atl=" + atl + "&code=" + code + \
-        "&charset=utf-8"  # если у вас web tutor, то данную переменную можете изменить
+    url = "https://abc.tele2.ru/qti_return.html?atl=" + atl + "&code=" + code + "&charset=utf-8"  # если у вас web tutor, то данную переменную можете изменить
     print(url)
     url_link = requests.get(url)
     url_link.encoding = 'utf-8'
@@ -48,15 +47,18 @@ def test_roulette(link):
 
 def start():
     # start programm
+
     print("***")
     print("***")
     print("sergsinist webtutor answer crawler")
     print("***")
     print("***")
-    start = input(
-        "Вставьте ссылку теста из браузера, где есть кнопка начать\продолжить тест: ")
+    start = input("Вставьте ссылку теста из браузера, где есть кнопка начать\продолжить тест: ")
     while start.strip():
-        test_roulette(start)
+        try:
+            test_roulette(start)
+        except Exception:
+            print("Возникла ошибка - попробуйте снова вставить ссылку")
         start = input("Можете повторить или нажать Enter для выхода: ")
         os.system('CLS')
     else:
