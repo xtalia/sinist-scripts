@@ -1,4 +1,4 @@
-# Serg Sinist test helper for solve memes in Tele2 or test like
+# Serg Sinist test helper for get answers in t2 etc
 # ver 0.03
 # За помощь спасибо Андрею Малахову из евки
 
@@ -22,7 +22,7 @@ def test_roulette(link):
 
     # сцепление ссылки, ведущей на искомый xml файл с его выводом
     url = "https://abc.tele2.ru/qti_return.html?atl=" + atl + "&code=" + code + \
-        "&charset=utf-8"  # если у вас web tutor, то данную переменную можете изменить
+        "&charset=utf-8" 
     print(url)
     url_link = requests.get(url)
     url_link.encoding = 'utf-8'
