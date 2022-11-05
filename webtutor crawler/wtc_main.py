@@ -49,11 +49,7 @@ def test_roulette(link):
 def start():
     # start programm
 
-    print("***")
-    print("***")
     print("sergsinist webtutor answer crawler")
-    print("***")
-    print("***")
     start = input(
         "Вставьте ссылку теста из браузера, где есть кнопка начать\продолжить тест: ")
     while start.strip():
