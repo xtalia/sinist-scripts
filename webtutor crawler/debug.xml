@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questestinterop>
+	<assessment title="Аттестация Специалиста B2B_2021 (KPI_LMS)" ident="a_6949147026783889249">
+		<max_score>25</max_score>
+		<assessmentcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+		<section title="Подключение" ident="a_6949147026783889249_s_4">
+			<selection_ordering>
+				<order order_type="Random"/>
+			</selection_ordering>
+			<sectioncontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+			<item title="Клиент планирует подключить SIM-карты десяти сотрудникам. При этом он готов вносить абонентскую плату, а также компенсировать дополнительные затраты на звонки по России и интернет - но не более 100 рублей в месяц сверх тарифа. Выбери тип контракта, а также, при необходимости, фильтр и доп.квоту" ident="6949129289675637481">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Клиент планирует подключить SIM-карты десяти сотрудникам. При этом он готов вносить абонентскую плату, а также компенсировать дополнительные затраты на звонки по России и интернет - но не более 100 рублей в месяц сверх тарифа. Выбери тип контракта, а также, при необходимости, фильтр и доп.квоту]]></mattext>
+					</material>
+					<response_lid ident="6949129289675637481_resp" rcardinality="Multiple">
+						<render_choice shuffle="No">
+							<response_label ident="6949129289675637481_sydx" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Тип контракта - "С личными балансами"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_amu9" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Тип контракта "Без личных балансов"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_1fyu" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Фильтр - "Базовый"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_6tm1" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Фильтр - "Местные + все SMS + GPRS "]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_4r8r" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Фильтр - "Россия + все SMS + GPRS "]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_0jdg" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Доп.квота - "Б/О "]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_1jbg" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Доп.квота - "100 руб."]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289675637481_h44o" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Доп.квота - "Нет"]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129289675637481_resp">6949129289675637481_sydx</varequal>
+							<not>
+								<varequal respident="6949129289675637481_resp">6949129289675637481_amu9</varequal>
+							</not>
+							<not>
+								<varequal respident="6949129289675637481_resp">6949129289675637481_1fyu</varequal>
+							</not>
+							<not>
+								<varequal respident="6949129289675637481_resp">6949129289675637481_6tm1</varequal>
+							</not>
+							<varequal respident="6949129289675637481_resp">6949129289675637481_4r8r</varequal>
+							<not>
+								<varequal respident="6949129289675637481_resp">6949129289675637481_0jdg</varequal>
+							</not>
+							<varequal respident="6949129289675637481_resp">6949129289675637481_1jbg</varequal>
+							<not>
+								<varequal respident="6949129289675637481_resp">6949129289675637481_h44o</varequal>
+							</not>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Расставь в правильном порядке свои действия при оформлении корпоративной ЭРФ" ident="6949129289774682354">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Расставь в правильном порядке свои действия при оформлении корпоративной ЭРФ]]></mattext>
+					</material>
+					<response_lid ident="6949129289774682354_resp" rcardinality="Ordered">
+						<render_choice shuffle="Yes">
+							<response_label ident="6949129289774682354_xb6f" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[В разделе "Работа с ЭРФ" выберу "Создание корп.ЭРФ"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289774682354_fo87" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Выберу тип контракта (с личными балансами/без личных балансов/M2M), юридический тип (ИП/юр.лицо), впишу ИНН клиента и полное наименование организации]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289774682354_fwd9" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Выберу, кто подписывает договор (руководитель/доверенное лицо/по разовой доверенности)]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289774682354_rrsl" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Заполню реквизиты организации во вкладке "Данные клиента" - "Реквизиты"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289774682354_aulq" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Впишу данные руководителя во вкладке "Данные клиента" - "Руководитель"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289774682354_95oa" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Укажу данные на доверенное лицо, если обратился не руководитель организации]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129289774682354_zsmb" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Подключу все необходимые номера через вкладку "Абоненты"]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_xb6f</varequal>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_fo87</varequal>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_fwd9</varequal>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_rrsl</varequal>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_aulq</varequal>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_95oa</varequal>
+							<varequal respident="6949129289774682354_resp">6949129289774682354_zsmb</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Что такое служебный абонент (служебный номер)?" ident="6949129306339545445">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Что такое служебный абонент (служебный номер)?]]></mattext>
+					</material>
+					<response_lid ident="6949129306339545445_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129306339545445_3dfo" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[номер SIM-карты для внесения оплаты на общий счет организации]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129306339545445_5444" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[номер абонента, с которым подписывается договор]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129306339545445_gdfc" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[пароль администратора WebCare]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129306339545445_1j1v" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[номер телефона персонального менеджера]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129306339545445_resp">6949129306339545445_3dfo</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Для чего нужно кодовое слово корпоративному клиенту?" ident="6949129306227098921">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Для чего нужно кодовое слово корпоративному клиенту?]]></mattext>
+					</material>
+					<response_lid ident="6949129306227098921_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129306227098921_j0nk" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[для идентификации клиента на корпоративной линии 636]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129306227098921_yqll" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[для оплаты счета через служебный номер]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129306227098921_p1su" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[для входа в личный кабинет WebCare]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129306227098921_m6hb" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[для обращения к персональному менеджеру]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129306227098921_resp">6949129306227098921_j0nk</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Какие ограничения по сумме устанавливаются на доп. квоту расходов?" ident="6949129297180757030">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Какие ограничения по сумме устанавливаются на доп. квоту расходов?]]></mattext>
+					</material>
+					<response_lid ident="6949129297180757030_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129297180757030_5syi" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[min = 50 руб., max = 5000 руб.]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129297180757030_aeow" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[min = 10 руб., max = 500 руб.]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129297180757030_p31j" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[min = 100 руб., max = 5000 руб.]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129297180757030_0gas" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[min = 50 руб., max = 500 руб.]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129297180757030_resp">6949129297180757030_5syi</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+		</section>
+		<section title="Бизнес-окружение" ident="a_6949147026783889249_s_1">
+			<selection_ordering>
+				<order order_type="Random"/>
+			</selection_ordering>
+			<sectioncontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+			<item title="Что должен сделать продавец, если лицевой счет головного клиента, указанный в сертификате на подключение к программе &quot;Бизнес окружение&quot;, неверный?" ident="6949129237339321753">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Что должен сделать продавец, если лицевой счет головного клиента, указанный в сертификате на подключение к программе "Бизнес окружение", неверный?]]></mattext>
+					</material>
+					<response_lid ident="6949129237339321753_resp" rcardinality="Multiple">
+						<render_choice shuffle="No">
+							<response_label ident="6949129237339321753_s5pj" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Использовать временный лицевой счет региона]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237339321753_7h6f" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Вежливо отказать клиенту]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237339321753_gf10" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Предупредить клиента, что звонки внутри компании будут платными и чтобы исправить ситуацию, ему нужно обратиться к сотруднику компании, от которого он получил сертификат]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237339321753_06f0" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Подключить на тариф для физических лиц]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129237339321753_resp">6949129237339321753_s5pj</varequal>
+							<not>
+								<varequal respident="6949129237339321753_resp">6949129237339321753_7h6f</varequal>
+							</not>
+							<varequal respident="6949129237339321753_resp">6949129237339321753_gf10</varequal>
+							<not>
+								<varequal respident="6949129237339321753_resp">6949129237339321753_06f0</varequal>
+							</not>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Каким образом можно определить в Web Dealer, что клиент подключен по программе &quot;Бизнес-окружение&quot;?" ident="6949129237735085916">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Каким образом можно определить в Web Dealer, что клиент подключен по программе "Бизнес-окружение"?]]></mattext>
+					</material>
+					<response_lid ident="6949129237735085916_resp" rcardinality="Multiple">
+						<render_choice shuffle="No">
+							<response_label ident="6949129237735085916_dlce" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Номер лицевого счета начинается с 00]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237735085916_acbx" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Над полем "Статус клиента" стоит отметка "Бизнес-окружение"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237735085916_umix" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Тип клиента - физическое лицо, но при этом подключен тариф для бизнес-клиентов]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237735085916_2ae0" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[В поле "Юр.тип клиента" стоит "Физ.лицо (БО)"]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<not>
+								<varequal respident="6949129237735085916_resp">6949129237735085916_dlce</varequal>
+							</not>
+							<varequal respident="6949129237735085916_resp">6949129237735085916_acbx</varequal>
+							<varequal respident="6949129237735085916_resp">6949129237735085916_umix</varequal>
+							<not>
+								<varequal respident="6949129237735085916_resp">6949129237735085916_2ae0</varequal>
+							</not>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Каким образом клиент с корпоративным договором может сменить тариф? Выбери все возможные способы" ident="6949129241879794208">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Каким образом клиент с корпоративным договором может сменить тариф? Выбери все возможные способы]]></mattext>
+					</material>
+					<response_lid ident="6949129241879794208_resp" rcardinality="Multiple">
+						<render_choice shuffle="No">
+							<response_label ident="6949129241879794208_he4y" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Справочная служба 611]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129241879794208_y3jz" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Справочная служба 636]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129241879794208_1q4x" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Справочная служба 614]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129241879794208_uu1l" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Электронная почта corpzapros@tele2.ru]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129241879794208_u6th" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Личный Кабинет]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129241879794208_7qpx" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[USSD]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129241879794208_6q4q" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[В салоне Tele2 по заявлению]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<not>
+								<varequal respident="6949129241879794208_resp">6949129241879794208_he4y</varequal>
+							</not>
+							<varequal respident="6949129241879794208_resp">6949129241879794208_y3jz</varequal>
+							<not>
+								<varequal respident="6949129241879794208_resp">6949129241879794208_1q4x</varequal>
+							</not>
+							<varequal respident="6949129241879794208_resp">6949129241879794208_uu1l</varequal>
+							<varequal respident="6949129241879794208_resp">6949129241879794208_u6th</varequal>
+							<not>
+								<varequal respident="6949129241879794208_resp">6949129241879794208_7qpx</varequal>
+							</not>
+							<varequal respident="6949129241879794208_resp">6949129241879794208_6q4q</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Что такое программа &quot;Бизнес окружение&quot;?" ident="6949129237681408740">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Что такое программа "Бизнес окружение"?]]></mattext>
+					</material>
+					<response_lid ident="6949129237681408740_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129237681408740_xnxm" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Программа для любых физических лиц - абонентов Tele2, позволяющая подключить бизнес-тарифы Tele2]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237681408740_3wpz" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Программа только для сотрудников государственных учреждений, позволяющая подключить бизнес-тарифы Tele2]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237681408740_xeg0" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Программа по предоставлению бизнес-тарифов сотрудникам бизнес-клиентов Tele2, которым не компенсируются расходы на корпоративную связь]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129237681408740_resp">6949129237681408740_xeg0</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Можно ли подключить к программе &quot;Бизнес окружение&quot;, если клиент-физическое лицо обслуживается у другого оператора сотовой связи?" ident="6949129237488863971">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Можно ли подключить к программе "Бизнес окружение", если клиент-физическое лицо обслуживается у другого оператора сотовой связи?]]></mattext>
+					</material>
+					<response_lid ident="6949129237488863971_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129237488863971_oiwm" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Нельзя]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129237488863971_2qn5" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Да, с помощью MNP, при наличии сертификата]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129237488863971_resp">6949129237488863971_2qn5</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+		</section>
+		<section title="Тарифы и услуги" ident="a_6949147026783889249_s_5">
+			<selection_ordering>
+				<order order_type="Random"/>
+			</selection_ordering>
+			<sectioncontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+			<item title="Клиент заключил контракт на 5 SIM-карт 12 декабря. Какая сумма будет списана за первый месяц пользования, если АП по каждой SIM-карте - 250 рублей?" ident="6949129318491494308">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Клиент заключил контракт на 5 SIM-карт 12 декабря. Какая сумма будет списана за первый месяц пользования, если АП по каждой SIM-карте - 250 рублей?]]></mattext>
+					</material>
+					<response_lid ident="6949129318491494308_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129318491494308_prgx" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[1250 рублей]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129318491494308_is42" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[646 рублей]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129318491494308_fhaw" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[806,45 рублей]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129318491494308_a82j" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[565 рублей]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129318491494308_resp">6949129318491494308_fhaw</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Действующий клиент внес средства, достаточные для списания абон. платы, на лицевой счет 15 числа текущего месяца. Что ему необходимо сделать, чтобы получить пакет минут и услуг в текущем месяце?" ident="6949129324194129088">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Действующий клиент внес средства, достаточные для списания абон. платы, на лицевой счет 15 числа текущего месяца. Что ему необходимо сделать, чтобы получить пакет минут и услуг в текущем месяце?]]></mattext>
+					</material>
+					<response_lid ident="6949129324194129088_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129324194129088_kmua" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[клиенту необходимо обратиться к персональному менеджеру или на линию 636]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129324194129088_26th" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[ничего, абон. плата спишется автоматически]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129324194129088_9gml" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[в текущем месяце получить пакет минут и услуг невозможно, только в следующем месяце]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129324194129088_resp">6949129324194129088_kmua</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="На каком тарифе при просмотре роликов на YouTube НЕ будет расходоваться трафик?" ident="6949129314249954094">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[На каком тарифе при просмотре роликов на YouTube НЕ будет расходоваться трафик?]]></mattext>
+					</material>
+					<response_lid ident="6949129314249954094_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129314249954094_f9u2" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA["Мой Бизнес M"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129314249954094_u639" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA["Мой Бизнес S"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129314249954094_xsqv" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA["Мой Бизнес Премиум"]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129314249954094_6q7a" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[На всех указанных тарифах]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129314249954094_resp">6949129314249954094_xsqv</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Клиент заключил договор 23 декабря. Когда будет списана следующая абонентская плата?" ident="6949129319887430017">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Клиент заключил договор 23 декабря. Когда будет списана следующая абонентская плата?]]></mattext>
+					</material>
+					<response_lid ident="6949129319887430017_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129319887430017_krli" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[1 января]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129319887430017_oles" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[23 января]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129319887430017_lhgi" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[22 января]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129319887430017_resp">6949129319887430017_krli</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Безлимит на какие мессенджеры и сервисы включен в абонентскую плату тарифа &quot; Мой бизнес L&quot;?" ident="6949129310452475668">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Безлимит на какие мессенджеры и сервисы включен в абонентскую плату тарифа " Мой бизнес L"?]]></mattext>
+					</material>
+					<response_lid ident="6949129310452475668_resp" rcardinality="Multiple">
+						<render_choice shuffle="No">
+							<response_label ident="6949129310452475668_v4as" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Вконтакте]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129310452475668_2inv" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Одноклассники]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129310452475668_z70s" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[What'sApp]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129310452475668_skqu" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Viber]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129310452475668_mncu" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Telegram]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129310452475668_vmpg" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Плюс навигация]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129310452475668_ljoj" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[TikTok]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_v4as</varequal>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_2inv</varequal>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_z70s</varequal>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_skqu</varequal>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_mncu</varequal>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_vmpg</varequal>
+							<varequal respident="6949129310452475668_resp">6949129310452475668_ljoj</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+		</section>
+		<section title="Документы" ident="a_6949147026783889249_s_2">
+			<selection_ordering>
+				<order order_type="Random"/>
+			</selection_ordering>
+			<sectioncontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+			<item title="Бизнес-клиент при подключении предоставил оригиналы документов. Твои действия?" ident="6949129246316581512">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Бизнес-клиент при подключении предоставил оригиналы документов. Твои действия?]]></mattext>
+					</material>
+					<response_lid ident="6949129246316581512_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129246316581512_r9u4" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Взять оригиналы документов у клиента, отправить в офис после подписания договора]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129246316581512_c0ql" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Сделать копии документов, поставить печать, отправить копии в офис после подписания договора]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129246316581512_qzj0" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Сделать копии, поставить на них свою подпись, ФИО, печать организации или дилера и комментарий "Копия верна", отправить копии в офис после подписания договора]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129246316581512_resp">6949129246316581512_qzj0</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="К тебе обратился представитель организации (ОАО) - доверенное лицо, чтобы стать бизнес-клиентом Tele2. При себе у него нет только ИНН. Как следует поступить?" ident="6949129255274446098">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[К тебе обратился представитель организации (ОАО) - доверенное лицо, чтобы стать бизнес-клиентом Tele2. При себе у него нет только ИНН. Как следует поступить?]]></mattext>
+					</material>
+					<response_lid ident="6949129255274446098_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129255274446098_gty4" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[объяснить, почему не можешь заключить договор на месте, но обязательно отправить электронную заявку с данными клиента в Tele2 или договориться о встрече с клиентом]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129255274446098_muko" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[заключить договор на месте, т.к. главное, чтобы была доверенность]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129255274446098_e121" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[отказать в заключении договора, т.к. копия ИНН - обязательный документ]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129255274446098_resp">6949129255274446098_gty4</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Какие документы потребуются для заключения договора с юридическим лицом (ООО, ПАО и т.д.)?" ident="6949129251183598069">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Какие документы потребуются для заключения договора с юридическим лицом (ООО, ПАО и т.д.)?]]></mattext>
+					</material>
+					<response_lid ident="6949129251183598069_resp" rcardinality="Multiple">
+						<render_choice shuffle="No">
+							<response_label ident="6949129251183598069_9tkp" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[ИНН]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129251183598069_dy9s" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[ОГРН/ЕГРЮЛ]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129251183598069_wqde" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[ЕГРИП]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129251183598069_0n2w" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Документ, удостоверяющий личность]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129251183598069_dmhn" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Решение или протокол об избрании руководителя]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129251183598069_12ru" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Оригинал доверенности на заключение договора (если обращается не руководитель организации)]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129251183598069_yn2a" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Оригинал или копия СНИЛС]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129251183598069_resp">6949129251183598069_9tkp</varequal>
+							<varequal respident="6949129251183598069_resp">6949129251183598069_dy9s</varequal>
+							<not>
+								<varequal respident="6949129251183598069_resp">6949129251183598069_wqde</varequal>
+							</not>
+							<varequal respident="6949129251183598069_resp">6949129251183598069_0n2w</varequal>
+							<varequal respident="6949129251183598069_resp">6949129251183598069_dmhn</varequal>
+							<varequal respident="6949129251183598069_resp">6949129251183598069_12ru</varequal>
+							<not>
+								<varequal respident="6949129251183598069_resp">6949129251183598069_yn2a</varequal>
+							</not>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Какая важная особенность должна быть у доверенности, чтобы по ней можно было заключить договор с представителем организации?" ident="6949129258235881810">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Какая важная особенность должна быть у доверенности, чтобы по ней можно было заключить договор с представителем организации?]]></mattext>
+					</material>
+					<response_lid ident="6949129258235881810_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129258235881810_d6kv" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[в доверенности обязательно должно быть указано о праве заключения договора]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129258235881810_sjrt" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[доверенность обязательно должна быть многоразовой (генеральной)]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129258235881810_csnx" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[доверенность всегда должна быть нотариально удостоверенной]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129258235881810_resp">6949129258235881810_d6kv</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Что необходимо сделать при предъявлении генеральной доверенности доверенным представителем юр. лица?" ident="6949129254580214245">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Что необходимо сделать при предъявлении генеральной доверенности доверенным представителем юр. лица?]]></mattext>
+					</material>
+					<response_lid ident="6949129254580214245_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129254580214245_q4r7" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[снять копию, оригинал отдать клиенту]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129254580214245_ef3o" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[снять копию, оригинал передать в Tele2 со всеми документами]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129254580214245_jk0t" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[объяснить, что необходима ее нотариально заверенная копия]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129254580214245_rbmb" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[оставить оригинал, чтобы передать в Tele2, копия в этом случае не нужна]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129254580214245_resp">6949129254580214245_q4r7</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+		</section>
+		<section title="Операции" ident="a_6949147026783889249_s_3">
+			<selection_ordering>
+				<order order_type="Random"/>
+			</selection_ordering>
+			<sectioncontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+			<item title="Где в карточке бизнес-клиента в Web Dealer доступны формирование и массовая печать отчетных документов?" ident="6949129284526366146">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Где в карточке бизнес-клиента в Web Dealer доступны формирование и массовая печать отчетных документов?]]></mattext>
+					</material>
+					<response_lid ident="6949129284526366146_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129284526366146_aor2" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Абонент-> Раздел Операции -> Счета]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129284526366146_27ux" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Закладка Фин. клиента -> подзакладка Массовое формирование счетов]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129284526366146_j72m" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Закладка Фин. абонента -> подзакладка Массовое формирование счетов]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129284526366146_gyvq" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Закладка Услуги -> услуга Счета]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129284526366146_resp">6949129284526366146_27ux</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Бизнес-клиент хочет приостановить пользование номером. В каком случае ты выберешь статус &quot;Приостановлен&quot;, а в каком - &quot;Блокирован&quot;?" ident="6949129271406055300">
+				<itemmetadata>
+					<qmd_responsetype>Multiple</qmd_responsetype>
+				</itemmetadata>
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Бизнес-клиент хочет приостановить пользование номером. В каком случае ты выберешь статус "Приостановлен", а в каком - "Блокирован"?]]></mattext>
+					</material>
+					<response_lid ident="6949129271406055300_resp_trld" rcardinality="Single" ws_right="6949129271406055300_resp_trld_val_kcoh">
+						<material>
+							<mattext texttype="text/plain"><![CDATA[Блокирован]]></mattext>
+						</material>
+						<render_choice shuffle="Yes">
+							<response_label ident="6949129271406055300_resp_trld_val_kcoh">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[абонент потерял sim-карту]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129271406055300_resp_6cyp_val_w8tr">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[абонент хочет временно прекратить пользоваться услугами компании, но хочет сохранить номер]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+					<response_lid ident="6949129271406055300_resp_6cyp" rcardinality="Single" ws_right="6949129271406055300_resp_6cyp_val_w8tr">
+						<material>
+							<mattext texttype="text/plain"><![CDATA[Приостановлен]]></mattext>
+						</material>
+						<render_choice shuffle="Yes">
+							<response_label ident="6949129271406055300_resp_trld_val_kcoh">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[абонент потерял sim-карту]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129271406055300_resp_6cyp_val_w8tr">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[абонент хочет временно прекратить пользоваться услугами компании, но хочет сохранить номер]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129271406055300_resp_trld">6949129271406055300_resp_trld_val_kcoh</varequal>
+							<varequal respident="6949129271406055300_resp_6cyp">6949129271406055300_resp_6cyp_val_w8tr</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="Где на сайте Tele2 можно найти бланки и документы, которые могут быть полезны для корпоративных клиентов?" ident="6949129271973209045">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[Где на сайте Tele2 можно найти бланки и документы, которые могут быть полезны для корпоративных клиентов?]]></mattext>
+					</material>
+					<response_lid ident="6949129271973209045_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129271973209045_f9nr" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[раздел «Бизнесу» → вкладка «Помощь»]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129271973209045_tlaz" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[раздел «О Tele2» → вкладка «Помощь» → «Бланки и документы»]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129271973209045_pd4t" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[раздел «Для бизнеса» → вкладка «Подключиться» → «Бланки и документы»]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129271973209045_7s9h" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[раздел «Для бизнеса» → вкладка «Помощь и обслуживание» → «Справочник абонента»]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129271973209045_resp">6949129271973209045_f9nr</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="У абонента уже есть номер Tele2, но он оформлен на физическое лицо, можно ли его подключить к корпоративному договору?" ident="6949129275335078997">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[У абонента уже есть номер Tele2, но он оформлен на физическое лицо, можно ли его подключить к корпоративному договору?]]></mattext>
+					</material>
+					<response_lid ident="6949129275335078997_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129275335078997_4kiy" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[да, для этого достаточно переоформить договор, обратившись с паспортом и документами в офис компании Tele2 в присутствии представителя организации]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129275335078997_ki5t" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[нет, чтобы стать корпоративным клиентом нужно приобрести новую SIM-карту и оформиться как корпоративный клиент]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129275335078997_resp">6949129275335078997_4kiy</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+			<item title="В чем особенность способа обслуживания клиентов с меткой &quot;Союз&quot;?" ident="6949129281392493908">
+				<itemcontrol hintswitch="No" solutionswitch="No" lastattempt="Yes" feedbackswitch="Yes"/>
+				<presentation>
+					<material>
+						<mattext texttype="text/plain"><![CDATA[В чем особенность способа обслуживания клиентов с меткой "Союз"?]]></mattext>
+					</material>
+					<response_lid ident="6949129281392493908_resp" rcardinality="Single">
+						<render_choice shuffle="No">
+							<response_label ident="6949129281392493908_y9yn" ws_right="1">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[На один корпоративный контракт подключены разные абоненты, которые не обязательно имеют отношение к организации]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129281392493908_po0v" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Корпоративные клиенты, объединенные по сфере бизнеса (например, торговля)]]></mattext>
+								</material>
+							</response_label>
+							<response_label ident="6949129281392493908_9622" ws_right="0">
+								<material>
+									<mattext texttype="text/plain"><![CDATA[Объединение корпоративных клиентов, которые имеют скидки на предоставляемые услуги связи]]></mattext>
+								</material>
+							</response_label>
+						</render_choice>
+					</response_lid>
+				</presentation>
+				<resprocessing>
+					<outcomes>
+						<decvar/>
+					</outcomes>
+					<respcondition title="Correct">
+						<conditionvar>
+							<varequal respident="6949129281392493908_resp">6949129281392493908_y9yn</varequal>
+						</conditionvar>
+						<setvar>1</setvar>
+					</respcondition>
+					<respcondition title="Wrong">
+						<conditionvar>
+							<other/>
+						</conditionvar>
+						<setvar>0</setvar>
+					</respcondition>
+				</resprocessing>
+			</item>
+		</section>
+	</assessment>
+</questestinterop>

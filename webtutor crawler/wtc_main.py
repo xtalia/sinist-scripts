@@ -3,62 +3,84 @@
 # За помощь спасибо Андрею Малахову из евки
 
 
-# pip install bs4, lxml, requests
+# pip install bs4, lxml, requests, colorama
+# Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
+from certifi import contents
+from colorama import Fore
 from ast import While
 import requests
 import os
+from os import path
 from bs4 import BeautifulSoup
-# import lxml
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
+from colorama import init as kek
+kek()  # для иницилизации колорамы
+CCC = 0
+
+# константы цветов, чтобы каждый раз не писать Fore...
+C, G, M, R, RR = Fore.CYAN, Fore.GREEN, Fore.MAGENTA, Fore.RED, Fore.RESET
+__location__ = path.realpath(path.join(os.getcwd(), path.dirname(__file__)))
 
 
-def test_roulette(link):
+def cls():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-    # парсинг ссылки link, где есть object_id и part_code
-    parsed_url = urlparse(link)
-    atl = parse_qs(parsed_url.query)['object_id'][0]
-    code = parse_qs(parsed_url.query)['part_code'][0]
+def readlink(link):
 
-    # сцепление ссылки, ведущей на искомый xml файл с его выводом
-    url = "https://abc.tele2.ru/qti_return.html?atl=" + atl + "&code=" + code + \
-        "&charset=utf-8" 
-    print(url)
-    url_link = requests.get(url)
-    url_link.encoding = 'utf-8'
+    if link == "111":
+        
+        with open(os.path.join(__location__ +  '\debug.xml'), 'r', encoding='utf-8') as file:
+            content = file.read()
+            soup = BeautifulSoup(content, "xml")
+            qss = soup.find_all('item')
+            print(R, "DEBUG")
 
-    soup = BeautifulSoup(url_link.text, "xml")
-    qss = soup.find_all('item')
+            
+    else:
+        # парсинг ссылки link, где есть object_id и part_code
+        parsed_url = urlparse(link)
+        atl = parse_qs(parsed_url.query)['object_id'][0]
+        code = parse_qs(parsed_url.query)['part_code'][0]
+
+        # сцепление ссылки, ведущей на искомый xml файл с его выводом
+        url = "https://abc.tele2.ru/qti_return.html?atl=" + atl + "&code=" + code + \
+            "&charset=utf-8"
+        print(M, url)
+        url_link, url_link.encoding = requests.get(url), 'utf-8'
+        soup = BeautifulSoup(url_link.text, "xml")
+        qss = soup.find_all('item')
 
 # цикл, который вытаскивает сначала заголовки вопросов в параметре title в теге item
+    # for qs in qss:
+    #     print(M + '\n' + "<?> " + RR + qs.get('title') + M + " <?>" + RR + '\n')
+    #     ass = qs.find('response_lid')
+    #     meme = ass.find_all("response_label", {"ws_right": "1"})
+    #     for sas in meme:
+    #         print(G + ">> ", RR + sas.find('mattext').text)
+    counter = 0
     for qs in qss:
-        print("********************************")
-        print("<?> " + qs.get('title') + " <?>")
-        print("********************************")
-        ass = qs.find('render_choice')
-        for sas in ass:
-            # поиск всех ответов с выводом значения верного\неверного ответа (1\0)
-            # print(">> "+ str(sas.find('material').text) + ' ' + str(sas.get('ws_right')))
-            # вывод правильного ответа
-            if sas.get('ws_right') == "1":
-                print(">> " + sas.find('material').text)
-            else:
-                print("---")
+        counter += 1
+        print(C + '\n' + " <" + str(counter) + "> " + RR + qs.get('title') + M + RR + '\n')
+        ass = qs.find('response_lid')
+        meme = ass.find_all("response_label", {"ws_right": "1"})
+        for sas in meme:
+            print(G + ">> ", RR + sas.find('mattext').text)
+
 
 
 def start():
     # start programm
 
-    print("sergsinist webtutor answer crawler")
-    start = input(
-        "Вставьте ссылку теста из браузера, где есть кнопка начать\продолжить тест: ")
+    print(G + "sergsinist webtutor answer crawler")
+    start = input(C + "Вставьте ссылку теста из браузера, где есть кнопка начать\продолжить тест: " + RR)
     while start.strip():
         try:
-            test_roulette(start)
+            readlink(start)
         except Exception:
-            print("Возникла ошибка - попробуйте снова вставить ссылку")
+            print(R + "Возникла ошибка - попробуйте снова вставить ссылку", RR)
         start = input("Можете повторить или нажать Enter для выхода: ")
-        os.system('CLS')
+        cls()
     else:
         quit()
 
